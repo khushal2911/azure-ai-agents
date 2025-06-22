@@ -1,4 +1,13 @@
-requests
-openai
-python_dotenv
-pillow
+requests==2.32.4
+python_dotenv==1.1.0
+### AI Frameworks, autogen version updated to support openaiassistantagent stable version
+openai==1.90.0
+autogen-agentchat==0.6.1
+autogen-ext[openai,azure,docker,web-surfer]==0.6.1
+playwright==1.52.0
+### image processing
+pillow==11.2.1
+matplotlib==3.10.3
+opencv-python==4.11.0.86
+### portfolio analyzer
+yfinance==0.2.18
