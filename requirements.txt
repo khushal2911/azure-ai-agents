@@ -9,5 +9,7 @@ playwright==1.52.0
 pillow==11.2.1
 matplotlib==3.10.3
 opencv-python==4.11.0.86
-### portfolio analyzer
+### Use case specific libraries
+arxiv==2.2.0
 yfinance==0.2.18
+gdelt==0.1.14
