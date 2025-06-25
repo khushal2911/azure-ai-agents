@@ -1,0 +1,11 @@
+This summary covers recent advancements in video generation and 3D animation techniques, primarily focusing on the papers mentioned in the arXiv submissions. 
+
+1. **Radial Attention** (arXiv:2506.19852v1): Introduces a new sparse attention mechanism that significantly reduces computational costs for long video generation tasks. The authors note a phenomenon termed Spatiotemporal Energy Decay, which is leveraged in their proposed Radial Attention framework to improve video generation efficiency while maintaining quality. 
+
+2. **AnimaX** (arXiv:2506.19851v1): Proposes a novel framework for 3D animation that bridges video diffusion motion knowledge and the controllable structure of skeletal animation. AnimaX supports diverse articulated meshes and achieves state-of-the-art results on benchmark datasets. 
+
+3. **Unified Vision-Language-Action Model (UniVLA)** (arXiv:2506.19850v1): This model advances the integration of vision, language, and action as discrete tokens, facilitating a wide range of multimodal tasks in robotic manipulation. UniVLA achieves state-of-the-art results in several benchmarks by efficiently leveraging large-scale multimodal data.
+
+4. **Orthogonal Finetuning Made Scalable (OFTv2)** (arXiv:2506.19847v1): This paper addresses the computational limitations of traditional orthogonal finetuning, proposing a new input-centric reformulation that significantly reduces training time and memory usage without sacrificing performance, particularly for large foundation models. 
+
+5. **JoyAgents-R1** (arXiv:2506.19846v1): Introduces joint evolution dynamics for multi-agent reinforcement learning to improve the cooperation and stability of heterogeneous agents. This method showcases how optimal decision-making can be achieved through structured training and memory evolution mechanisms.

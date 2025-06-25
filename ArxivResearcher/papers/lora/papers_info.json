@@ -1,0 +1,81 @@
+{
+  "2506.19852v1": {
+    "title": "Radial Attention: $O(n\\log n)$ Sparse Attention with Energy Decay for Long Video Generation",
+    "authors": [
+      "Xingyang Li",
+      "Muyang Li",
+      "Tianle Cai",
+      "Haocheng Xi",
+      "Shuo Yang",
+      "Yujun Lin",
+      "Lvmin Zhang",
+      "Songlin Yang",
+      "Jinbo Hu",
+      "Kelly Peng",
+      "Maneesh Agrawala",
+      "Ion Stoica",
+      "Kurt Keutzer",
+      "Song Han"
+    ],
+    "summary": "Recent advances in diffusion models have enabled high-quality video\ngeneration, but the additional temporal dimension significantly increases\ncomputational costs, making training and inference on long videos prohibitively\nexpensive. In this paper, we identify a phenomenon we term Spatiotemporal\nEnergy Decay in video diffusion models: post-softmax attention scores diminish\nas spatial and temporal distance between tokens increase, akin to the physical\ndecay of signal or waves over space and time in nature. Motivated by this, we\npropose Radial Attention, a scalable sparse attention mechanism with $O(n \\log\nn)$ complexity that translates energy decay into exponentially decaying compute\ndensity, which is significantly more efficient than standard $O(n^2)$ dense\nattention and more expressive than linear attention. Specifically, Radial\nAttention employs a simple, static attention mask where each token attends to\nspatially nearby tokens, with the attention window size shrinking with temporal\ndistance. Moreover, it allows pre-trained video diffusion models to extend\ntheir generation length with efficient LoRA-based fine-tuning. Extensive\nexperiments show that Radial Attention maintains video quality across\nWan2.1-14B, HunyuanVideo, and Mochi 1, achieving up to a 1.9$\\times$ speedup\nover the original dense attention. With minimal tuning, it enables video\ngeneration up to 4$\\times$ longer while reducing training costs by up to\n4.4$\\times$ compared to direct fine-tuning and accelerating inference by up to\n3.7$\\times$ compared to dense attention inference.",
+    "pdf_url": "http://arxiv.org/pdf/2506.19852v1",
+    "published": "2025-06-24"
+  },
+  "2506.19658v1": {
+    "title": "SAM2-SGP: Enhancing SAM2 for Medical Image Segmentation via Support-Set Guided Prompting",
+    "authors": [
+      "Yang Xing",
+      "Jiong Wu",
+      "Yuheng Bu",
+      "Kuang Gong"
+    ],
+    "summary": "Although new vision foundation models such as Segment Anything Model 2 (SAM2)\nhave significantly enhanced zero-shot image segmentation capabilities, reliance\non human-provided prompts poses significant challenges in adapting SAM2 to\nmedical image segmentation tasks. Moreover, SAM2's performance in medical image\nsegmentation was limited by the domain shift issue, since it was originally\ntrained on natural images and videos. To address these challenges, we proposed\nSAM2 with support-set guided prompting (SAM2-SGP), a framework that eliminated\nthe need for manual prompts. The proposed model leveraged the memory mechanism\nof SAM2 to generate pseudo-masks using image-mask pairs from a support set via\na Pseudo-mask Generation (PMG) module. We further introduced a novel\nPseudo-mask Attention (PMA) module, which used these pseudo-masks to\nautomatically generate bounding boxes and enhance localized feature extraction\nby guiding attention to relevant areas. Furthermore, a low-rank adaptation\n(LoRA) strategy was adopted to mitigate the domain shift issue. The proposed\nframework was evaluated on both 2D and 3D datasets across multiple medical\nimaging modalities, including fundus photography, X-ray, computed tomography\n(CT), magnetic resonance imaging (MRI), positron emission tomography (PET), and\nultrasound. The results demonstrated a significant performance improvement over\nstate-of-the-art models, such as nnUNet and SwinUNet, as well as foundation\nmodels, such as SAM2 and MedSAM2, underscoring the effectiveness of the\nproposed approach. Our code is publicly available at\nhttps://github.com/astlian9/SAM_Support.",
+    "pdf_url": "http://arxiv.org/pdf/2506.19658v1",
+    "published": "2025-06-24"
+  },
+  "2506.19306v1": {
+    "title": "Airway Skill Assessment with Spatiotemporal Attention Mechanisms Using Human Gaze",
+    "authors": [
+      "Jean-Paul Ainam",
+      "Rahul",
+      "Lora Cavuoto",
+      "Matthew Hackett",
+      "Jack Norfleet",
+      "Suvranu De"
+    ],
+    "summary": "Airway management skills are critical in emergency medicine and are typically\nassessed through subjective evaluation, often failing to gauge competency in\nreal-world scenarios. This paper proposes a machine learning-based approach for\nassessing airway skills, specifically endotracheal intubation (ETI), using\nhuman gaze data and video recordings. The proposed system leverages an\nattention mechanism guided by the human gaze to enhance the recognition of\nsuccessful and unsuccessful ETI procedures. Visual masks were created from gaze\npoints to guide the model in focusing on task-relevant areas, reducing\nirrelevant features. An autoencoder network extracts features from the videos,\nwhile an attention module generates attention from the visual masks, and a\nclassifier outputs a classification score. This method, the first to use human\ngaze for ETI, demonstrates improved accuracy and efficiency over traditional\nmethods. The integration of human gaze data not only enhances model performance\nbut also offers a robust, objective assessment tool for clinical skills,\nparticularly in high-stress environments such as military settings. The results\nshow improvements in prediction accuracy, sensitivity, and trustworthiness,\nhighlighting the potential for this approach to improve clinical training and\npatient outcomes in emergency medicine.",
+    "pdf_url": "http://arxiv.org/pdf/2506.19306v1",
+    "published": "2025-06-24"
+  },
+  "2506.19072v1": {
+    "title": "HAWAII: Hierarchical Visual Knowledge Transfer for Efficient Vision-Language Models",
+    "authors": [
+      "Yimu Wang",
+      "Mozhgan Nasr Azadani",
+      "Sean Sedwards",
+      "Krzysztof Czarnecki"
+    ],
+    "summary": "Improving the visual understanding ability of vision-language models (VLMs)\nis crucial for enhancing their performance across various tasks. While using\nmultiple pretrained visual experts has shown great promise, it often incurs\nsignificant computational costs during training and inference. To address this\nchallenge, we propose HAWAII, a novel framework that distills knowledge from\nmultiple visual experts into a single vision encoder, enabling it to inherit\nthe complementary strengths of several experts with minimal computational\noverhead. To mitigate conflicts among different teachers and switch between\ndifferent teacher-specific knowledge, instead of using a fixed set of adapters\nfor multiple teachers, we propose to use teacher-specific Low-Rank Adaptation\n(LoRA) adapters with a corresponding router. Each adapter is aligned with a\nspecific teacher, avoiding noisy guidance during distillation. To enable\nefficient knowledge distillation, we propose fine-grained and coarse-grained\ndistillation. At the fine-grained level, token importance scores are employed\nto emphasize the most informative tokens from each teacher adaptively. At the\ncoarse-grained level, we summarize the knowledge from multiple teachers and\ntransfer it to the student using a set of general-knowledge LoRA adapters with\na router. Extensive experiments on various vision-language tasks demonstrate\nthe superiority of HAWAII, compared to the popular open-source VLMs.",
+    "pdf_url": "http://arxiv.org/pdf/2506.19072v1",
+    "published": "2025-06-23"
+  },
+  "2506.18902v2": {
+    "title": "jina-embeddings-v4: Universal Embeddings for Multimodal Multilingual Retrieval",
+    "authors": [
+      "Michael G\u00fcnther",
+      "Saba Sturua",
+      "Mohammad Kalim Akram",
+      "Isabelle Mohr",
+      "Andrei Ungureanu",
+      "Bo Wang",
+      "Sedigheh Eslami",
+      "Scott Martens",
+      "Maximilian Werk",
+      "Nan Wang",
+      "Han Xiao"
+    ],
+    "summary": "We introduce jina-embeddings-v4, a 3.8 billion parameter multimodal embedding\nmodel that unifies text and image representations through a novel architecture\nsupporting both single-vector and multi-vector embeddings in the late\ninteraction style. The model incorporates task-specific Low-Rank Adaptation\n(LoRA) adapters to optimize performance across diverse retrieval scenarios,\nincluding query-document retrieval, semantic text similarity, and code search.\nComprehensive evaluations demonstrate that jina-embeddings-v4 achieves\nstate-of-the-art performance on both single-modal and cross-modal retrieval\ntasks, with particular strength in processing visually rich content such as\ntables, charts, diagrams, and mixed-media formats. To facilitate evaluation of\nthis capability, we also introduce Jina-VDR, a novel benchmark specifically\ndesigned for visually rich image retrieval.",
+    "pdf_url": "http://arxiv.org/pdf/2506.18902v2",
+    "published": "2025-06-23"
+  }
+}
