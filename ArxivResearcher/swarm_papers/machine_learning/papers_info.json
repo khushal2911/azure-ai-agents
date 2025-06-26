@@ -1,0 +1,86 @@
+{
+  "2506.20671v1": {
+    "title": "IPFormer: Visual 3D Panoptic Scene Completion with Context-Adaptive Instance Proposals",
+    "authors": [
+      "Markus Gross",
+      "Aya Fahmy",
+      "Danit Niwattananan",
+      "Dominik Muhle",
+      "Rui Song",
+      "Daniel Cremers",
+      "Henri Mee\u00df"
+    ],
+    "summary": "Semantic Scene Completion (SSC) has emerged as a pivotal approach for jointly\nlearning scene geometry and semantics, enabling downstream applications such as\nnavigation in mobile robotics. The recent generalization to Panoptic Scene\nCompletion (PSC) advances the SSC domain by integrating instance-level\ninformation, thereby enhancing object-level sensitivity in scene understanding.\nWhile PSC was introduced using LiDAR modality, methods based on camera images\nremain largely unexplored. Moreover, recent Transformer-based SSC approaches\nutilize a fixed set of learned queries to reconstruct objects within the scene\nvolume. Although these queries are typically updated with image context during\ntraining, they remain static at test time, limiting their ability to\ndynamically adapt specifically to the observed scene. To overcome these\nlimitations, we propose IPFormer, the first approach that leverages\ncontext-adaptive instance proposals at train and test time to address\nvision-based 3D Panoptic Scene Completion. Specifically, IPFormer adaptively\ninitializes these queries as panoptic instance proposals derived from image\ncontext and further refines them through attention-based encoding and decoding\nto reason about semantic instance-voxel relationships. Experimental results\nshow that our approach surpasses state-of-the-art methods in overall panoptic\nmetrics PQ$^\\dagger$ and PQ-All, matches performance in individual metrics, and\nachieves a runtime reduction exceeding 14$\\times$. Furthermore, our ablation\nstudies reveal that dynamically deriving instance proposals from image context,\nas opposed to random initialization, leads to a 3.62% increase in PQ-All and a\nremarkable average improvement of 18.65% in combined Thing-metrics. These\nresults highlight our introduction of context-adaptive instance proposals as a\npioneering effort in addressing vision-based 3D Panoptic Scene Completion.",
+    "pdf_url": "http://arxiv.org/pdf/2506.20671v1",
+    "published": "2025-06-25"
+  },
+  "2506.20670v1": {
+    "title": "MMSearch-R1: Incentivizing LMMs to Search",
+    "authors": [
+      "Jinming Wu",
+      "Zihao Deng",
+      "Wei Li",
+      "Yiding Liu",
+      "Bo You",
+      "Bo Li",
+      "Zejun Ma",
+      "Ziwei Liu"
+    ],
+    "summary": "Robust deployment of large multimodal models (LMMs) in real-world scenarios\nrequires access to external knowledge sources, given the complexity and dynamic\nnature of real-world information. Existing approaches such as\nretrieval-augmented generation (RAG) and prompt engineered search agents rely\non rigid pipelines, often leading to inefficient or excessive search behaviors.\nWe present MMSearch-R1, the first end-to-end reinforcement learning framework\nthat enables LMMs to perform on-demand, multi-turn search in real-world\nInternet environments. Our framework integrates both image and text search\ntools, allowing the model to reason about when and how to invoke them guided by\nan outcome-based reward with a search penalty. To support training, We collect\na multimodal search VQA dataset through a semi-automated pipeline that covers\ndiverse visual and textual knowledge needs and curate a search-balanced subset\nwith both search-required and search-free samples, which proves essential for\nshaping efficient and on-demand search behavior. Extensive experiments on\nknowledge-intensive and info-seeking VQA tasks show that our model not only\noutperforms RAG-based baselines of the same model size, but also matches the\nperformance of a larger RAG-based model while reducing search calls by over\n30%. We further analyze key empirical findings to offer actionable insights for\nadvancing research in multimodal search.",
+    "pdf_url": "http://arxiv.org/pdf/2506.20670v1",
+    "published": "2025-06-25"
+  },
+  "2506.20668v1": {
+    "title": "DemoDiffusion: One-Shot Human Imitation using pre-trained Diffusion Policy",
+    "authors": [
+      "Sungjae Park",
+      "Homanga Bharadhwaj",
+      "Shubham Tulsiani"
+    ],
+    "summary": "We propose DemoDiffusion, a simple and scalable method for enabling robots to\nperform manipulation tasks in natural environments by imitating a single human\ndemonstration. Our approach is based on two key insights. First, the hand\nmotion in a human demonstration provides a useful prior for the robot's\nend-effector trajectory, which we can convert into a rough open-loop robot\nmotion trajectory via kinematic retargeting. Second, while this retargeted\nmotion captures the overall structure of the task, it may not align well with\nplausible robot actions in-context. To address this, we leverage a pre-trained\ngeneralist diffusion policy to modify the trajectory, ensuring it both follows\nthe human motion and remains within the distribution of plausible robot\nactions. Our approach avoids the need for online reinforcement learning or\npaired human-robot data, enabling robust adaptation to new tasks and scenes\nwith minimal manual effort. Experiments in both simulation and real-world\nsettings show that DemoDiffusion outperforms both the base policy and the\nretargeted trajectory, enabling the robot to succeed even on tasks where the\npre-trained generalist policy fails entirely. Project page:\nhttps://demodiffusion.github.io/",
+    "pdf_url": "http://arxiv.org/pdf/2506.20668v1",
+    "published": "2025-06-25"
+  },
+  "2506.20664v1": {
+    "title": "The Decrypto Benchmark for Multi-Agent Reasoning and Theory of Mind",
+    "authors": [
+      "Andrei Lupu",
+      "Timon Willi",
+      "Jakob Foerster"
+    ],
+    "summary": "As Large Language Models (LLMs) gain agentic abilities, they will have to\nnavigate complex multi-agent scenarios, interacting with human users and other\nagents in cooperative and competitive settings. This will require new reasoning\nskills, chief amongst them being theory of mind (ToM), or the ability to reason\nabout the \"mental\" states of other agents. However, ToM and other multi-agent\nabilities in LLMs are poorly understood, since existing benchmarks suffer from\nnarrow scope, data leakage, saturation, and lack of interactivity. We thus\npropose Decrypto, a game-based benchmark for multi-agent reasoning and ToM\ndrawing inspiration from cognitive science, computational pragmatics and\nmulti-agent reinforcement learning. It is designed to be as easy as possible in\nall other dimensions, eliminating confounding factors commonly found in other\nbenchmarks. To our knowledge, it is also the first platform for designing\ninteractive ToM experiments.\n  We validate the benchmark design through comprehensive empirical evaluations\nof frontier LLMs, robustness studies, and human-AI cross-play experiments. We\nfind that LLM game-playing abilities lag behind humans and simple\nword-embedding baselines. We then create variants of two classic cognitive\nscience experiments within Decrypto to evaluate three key ToM abilities.\nSurprisingly, we find that state-of-the-art reasoning models are significantly\nworse at those tasks than their older counterparts. This demonstrates that\nDecrypto addresses a crucial gap in current reasoning and ToM evaluations, and\npaves the path towards better artificial agents.",
+    "pdf_url": "http://arxiv.org/pdf/2506.20664v1",
+    "published": "2025-06-25"
+  },
+  "2506.20661v1": {
+    "title": "Architectural mechanisms of a universal fault-tolerant quantum computer",
+    "authors": [
+      "Dolev Bluvstein",
+      "Alexandra A. Geim",
+      "Sophie H. Li",
+      "Simon J. Evered",
+      "J. Pablo Bonilla Ataides",
+      "Gefen Baranes",
+      "Andi Gu",
+      "Tom Manovitz",
+      "Muqing Xu",
+      "Marcin Kalinowski",
+      "Shayan Majidy",
+      "Christian Kokail",
+      "Nishad Maskara",
+      "Elias C. Trapp",
+      "Luke M. Stewart",
+      "Simon Hollerith",
+      "Hengyun Zhou",
+      "Michael J. Gullans",
+      "Susanne F. Yelin",
+      "Markus Greiner",
+      "Vladan Vuletic",
+      "Madelyn Cain",
+      "Mikhail D. Lukin"
+    ],
+    "summary": "Quantum error correction (QEC) is believed to be essential for the\nrealization of large-scale quantum computers. However, due to the complexity of\noperating on the encoded `logical' qubits, understanding the physical\nprinciples for building fault-tolerant quantum devices and combining them into\nefficient architectures is an outstanding scientific challenge. Here we utilize\nreconfigurable arrays of up to 448 neutral atoms to implement all key elements\nof a universal, fault-tolerant quantum processing architecture and\nexperimentally explore their underlying working mechanisms. We first employ\nsurface codes to study how repeated QEC suppresses errors, demonstrating\n2.14(13)x below-threshold performance in a four-round characterization circuit\nby leveraging atom loss detection and machine learning decoding. We then\ninvestigate logical entanglement using transversal gates and lattice surgery,\nand extend it to universal logic through transversal teleportation with 3D\n[[15,1,3]] codes, enabling arbitrary-angle synthesis with logarithmic overhead.\nFinally, we develop mid-circuit qubit re-use, increasing experimental cycle\nrates by two orders of magnitude and enabling deep-circuit protocols with\ndozens of logical qubits and hundreds of logical teleportations with [[7,1,3]]\nand high-rate [[16,6,4]] codes while maintaining constant internal entropy. Our\nexperiments reveal key principles for efficient architecture design, involving\nthe interplay between quantum logic and entropy removal, judiciously using\nphysical entanglement in logic gates and magic state generation, and leveraging\nteleportations for universality and physical qubit reset. These results\nestablish foundations for scalable, universal error-corrected processing and\nits practical implementation with neutral atom systems.",
+    "pdf_url": "http://arxiv.org/pdf/2506.20661v1",
+    "published": "2025-06-25"
+  }
+}

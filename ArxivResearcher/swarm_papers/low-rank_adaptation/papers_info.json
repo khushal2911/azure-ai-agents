@@ -1,0 +1,62 @@
+{
+  "2506.20671v1": {
+    "title": "IPFormer: Visual 3D Panoptic Scene Completion with Context-Adaptive Instance Proposals",
+    "authors": [
+      "Markus Gross",
+      "Aya Fahmy",
+      "Danit Niwattananan",
+      "Dominik Muhle",
+      "Rui Song",
+      "Daniel Cremers",
+      "Henri Mee\u00df"
+    ],
+    "summary": "Semantic Scene Completion (SSC) has emerged as a pivotal approach for jointly\nlearning scene geometry and semantics, enabling downstream applications such as\nnavigation in mobile robotics. The recent generalization to Panoptic Scene\nCompletion (PSC) advances the SSC domain by integrating instance-level\ninformation, thereby enhancing object-level sensitivity in scene understanding.\nWhile PSC was introduced using LiDAR modality, methods based on camera images\nremain largely unexplored. Moreover, recent Transformer-based SSC approaches\nutilize a fixed set of learned queries to reconstruct objects within the scene\nvolume. Although these queries are typically updated with image context during\ntraining, they remain static at test time, limiting their ability to\ndynamically adapt specifically to the observed scene. To overcome these\nlimitations, we propose IPFormer, the first approach that leverages\ncontext-adaptive instance proposals at train and test time to address\nvision-based 3D Panoptic Scene Completion. Specifically, IPFormer adaptively\ninitializes these queries as panoptic instance proposals derived from image\ncontext and further refines them through attention-based encoding and decoding\nto reason about semantic instance-voxel relationships. Experimental results\nshow that our approach surpasses state-of-the-art methods in overall panoptic\nmetrics PQ$^\\dagger$ and PQ-All, matches performance in individual metrics, and\nachieves a runtime reduction exceeding 14$\\times$. Furthermore, our ablation\nstudies reveal that dynamically deriving instance proposals from image context,\nas opposed to random initialization, leads to a 3.62% increase in PQ-All and a\nremarkable average improvement of 18.65% in combined Thing-metrics. These\nresults highlight our introduction of context-adaptive instance proposals as a\npioneering effort in addressing vision-based 3D Panoptic Scene Completion.",
+    "pdf_url": "http://arxiv.org/pdf/2506.20671v1",
+    "published": "2025-06-25"
+  },
+  "2506.20668v1": {
+    "title": "DemoDiffusion: One-Shot Human Imitation using pre-trained Diffusion Policy",
+    "authors": [
+      "Sungjae Park",
+      "Homanga Bharadhwaj",
+      "Shubham Tulsiani"
+    ],
+    "summary": "We propose DemoDiffusion, a simple and scalable method for enabling robots to\nperform manipulation tasks in natural environments by imitating a single human\ndemonstration. Our approach is based on two key insights. First, the hand\nmotion in a human demonstration provides a useful prior for the robot's\nend-effector trajectory, which we can convert into a rough open-loop robot\nmotion trajectory via kinematic retargeting. Second, while this retargeted\nmotion captures the overall structure of the task, it may not align well with\nplausible robot actions in-context. To address this, we leverage a pre-trained\ngeneralist diffusion policy to modify the trajectory, ensuring it both follows\nthe human motion and remains within the distribution of plausible robot\nactions. Our approach avoids the need for online reinforcement learning or\npaired human-robot data, enabling robust adaptation to new tasks and scenes\nwith minimal manual effort. Experiments in both simulation and real-world\nsettings show that DemoDiffusion outperforms both the base policy and the\nretargeted trajectory, enabling the robot to succeed even on tasks where the\npre-trained generalist policy fails entirely. Project page:\nhttps://demodiffusion.github.io/",
+    "pdf_url": "http://arxiv.org/pdf/2506.20668v1",
+    "published": "2025-06-25"
+  },
+  "2506.20633v1": {
+    "title": "rd-spiral: An open-source Python library for learning 2D reaction-diffusion dynamics through pseudo-spectral method",
+    "authors": [
+      "Sandy H. S. Herho",
+      "Iwan P. Anwar",
+      "Rusmawan Suwarman"
+    ],
+    "summary": "We introduce rd-spiral, an open-source Python library for simulating 2D\nreaction-diffusion systems using pseudo-spectral methods. The framework\ncombines FFT-based spatial discretization with adaptive Dormand-Prince time\nintegration, achieving exponential convergence while maintaining pedagogical\nclarity. We analyze three dynamical regimes: stable spirals, spatiotemporal\nchaos, and pattern decay, revealing extreme non-Gaussian statistics (kurtosis\n$>96$) in stable states. Information-theoretic metrics show $10.7\\%$ reduction\nin activator-inhibitor coupling during turbulence versus $6.5\\%$ in stable\nregimes. The solver handles stiffness ratios $>6:1$ with features including\nautomated equilibrium classification and checkpointing. Effect sizes\n($\\delta=0.37$--$0.78$) distinguish regimes, with asymmetric field\nsensitivities to perturbations. By balancing computational rigor with\neducational transparency, rd-spiral bridges theoretical and practical nonlinear\ndynamics.",
+    "pdf_url": "http://arxiv.org/pdf/2506.20633v1",
+    "published": "2025-06-25"
+  },
+  "2506.20629v1": {
+    "title": "PLoP: Precise LoRA Placement for Efficient Finetuning of Large Models",
+    "authors": [
+      "Soufiane Hayou",
+      "Nikhil Ghosh",
+      "Bin Yu"
+    ],
+    "summary": "Low-Rank Adaptation (LoRA) is a widely used finetuning method for large\nmodels. Its small memory footprint allows practitioners to adapt large models\nto specific tasks at a fraction of the cost of full finetuning. Different\nmodifications have been proposed to enhance its efficiency by, for example,\nsetting the learning rate, the rank, and the initialization. Another\nimprovement axis is adapter placement strategy: when using LoRA, practitioners\nusually pick module types to adapt with LoRA, such as Query and Key modules.\nFew works have studied the problem of adapter placement, with nonconclusive\nresults: original LoRA paper suggested placing adapters in attention modules,\nwhile other works suggested placing them in the MLP modules. Through an\nintuitive theoretical analysis, we introduce PLoP (Precise LoRA Placement), a\nlightweight method that allows automatic identification of module types where\nLoRA adapters should be placed, given a pretrained model and a finetuning task.\nWe demonstrate that PLoP consistently outperforms, and in the worst case\ncompetes, with commonly used placement strategies through comprehensive\nexperiments on supervised finetuning and reinforcement learning for reasoning.",
+    "pdf_url": "http://arxiv.org/pdf/2506.20629v1",
+    "published": "2025-06-25"
+  },
+  "2506.20600v1": {
+    "title": "CogGen: A Learner-Centered Generative AI Architecture for Intelligent Tutoring with Programming Video",
+    "authors": [
+      "Wengxi Li",
+      "Roy Pea",
+      "Nick Haber",
+      "Hari Subramonyam"
+    ],
+    "summary": "We introduce CogGen, a learner-centered AI architecture that transforms\nprogramming videos into interactive, adaptive learning experiences by\nintegrating student modeling with generative AI tutoring based on the Cognitive\nApprenticeship framework. The architecture consists of three components: (1)\nvideo segmentation by learning goals, (2) a conversational tutoring engine\napplying Cognitive Apprenticeship strategies, and (3) a student model using\nBayesian Knowledge Tracing to adapt instruction. Our technical evaluation\ndemonstrates effective video segmentation accuracy and strong pedagogical\nalignment across knowledge, method, action, and interaction layers. Ablation\nstudies confirm the necessity of each component in generating effective\nguidance. This work advances AI-powered tutoring by bridging structured student\nmodeling with interactive AI conversations, offering a scalable approach to\nenhancing video-based programming education.",
+    "pdf_url": "http://arxiv.org/pdf/2506.20600v1",
+    "published": "2025-06-25"
+  }
+}
